@@ -26,8 +26,8 @@ const Portfolio = () => {
   ];
   return (
     <div
-      name="portfolio "
-      className="bg-gradient-to-b from-black to-gray-800 w-full  text-white h-[100vh] md:h-auto overflow-auto"
+      name="Portfolio"
+      className="bg-gradient-to-b from-black to-gray-800 w-full  text-white h-[100vh] md:h-auto "
     >
       <div className=" max-w-screen-xl  mx-auto flex-col flex  h-full  pt-7 w-full p-4">
         <div className="pb-4">
@@ -37,10 +37,10 @@ const Portfolio = () => {
           <p className="py-4">Checkout of some my Projects</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 overflow-auto">
           {/* structure for card */}
           {projectlink.map(({ id, src }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+            <div key={id} className="shadow-md shadow-gray-600 rounded-lg m-2">
               <img
                 src={src}
                 alt="img"

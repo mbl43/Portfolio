@@ -77,7 +77,7 @@ const Experience = () => {
   return (
     <div
       name="Experience"
-      className="bg-gradient-to-b from-black to-gray-800 w-full h-screen text-white flex justify-center   md:h-auto overflow-auto"
+      className="bg-gradient-to-b from-black to-gray-800 w-full h-screen text-white flex justify-center   md:h-auto "
     >
       <div className="max-w-screen-xl flex flex-col w-full mx-auto p-4 px-5 h-full">
         <div className=" pb-4">
@@ -86,7 +86,7 @@ const Experience = () => {
           </p>
           <br />
 
-          <p className="py-8 text-xl">
+          <p className="py-8 sm:text-xl">
             I have 1.9 years of experience as a web developer at eClerx Services
             Limited, Pune. I have honed my skills in programming languages such
             as HTML, CSS, JavaScript, and Node.js. Additionally, my proficiency
@@ -95,12 +95,12 @@ const Experience = () => {
             capabilities as a web developer.
           </p>
         </div>
-        <div className="grid grid-cols-2 w-fit sm:grid-cols-4 md:grid-cols-5 gap-8 px-2 sm:px-0  ">
+        <div className="grid grid-cols-2 w-fit sm:grid-cols-4 md:grid-cols-5 gap-8 px-2 sm:px-0  overflow-auto">
           {/* structure of skill */}
           {skill.map(({ id, src, text, style }) => (
             <div
               key={id}
-              className={` shadow-md shadow-gray-600 rounded-lg flex justify-center items-center flex-col ${style}`}
+              className={` shadow-md shadow-gray-600 m-2 rounded-lg flex justify-center items-center flex-col ${style}`}
             >
               <img
                 src={src}
