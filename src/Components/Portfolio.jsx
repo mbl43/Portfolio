@@ -1,27 +1,36 @@
 import React from "react";
-import Project from "../assets/portfolio/Project.jpg";
+import Currency from "../assets/portfolio/currency.png"
+import Password from "../assets/portfolio/passoword.jpg"
+import PM from "../assets/portfolio/pm.png"
+import Interview from "../assets/portfolio/interview.png"
+import Bookstore from "../assets/portfolio/bookstore.png"
 
 const Portfolio = () => {
   const projectlink = [
     {
-      id: 1,
-      src: Project,
+      id:1n,
+      src: Currency,
+      link: "https://currency-converter-rt.vercel.app/",
     },
     {
       id: 2,
-      src: Project,
+      src: Bookstore,
+      link: "https://spectacular-dango-a7d490.netlify.app/",
     },
     {
       id: 3,
-      src: Project,
+      src: Password,
+      link:"https://password-generator-rt.vercel.app/"
     },
     {
       id: 4,
-      src: Project,
+      src: Interview,
+      link:"https://mbl43.github.io/Mock-interviewER/"
     },
     {
       id: 5,
-      src: Project,
+      src: PM,
+      link:"https://pm-nextgen-solutions.vercel.app/"
     },
   ];
   return (
@@ -39,16 +48,16 @@ const Portfolio = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 overflow-auto">
           {/* structure for card */}
-          {projectlink.map(({ id, src }) => (
+          {projectlink.map(({ id, src,link }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg m-2">
               <img
                 src={src}
                 alt="img"
-                className="rounded-md duration-200 hover:scale-105"
+                className="rounded-md duration-200 hover:scale-105 "
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2  px-6 py-3 m-4 duration-200 hover:scale-105 md:text-3xl">
-                  Demo
+                <button className="w-1/2  px-6 py-1 m-4 duration-200 hover:scale-105 md:text-3xl">
+                   <a href={link} target="_blank" rel="noopener noreferrer">Demo</a>
                 </button>
               </div>
             </div>
