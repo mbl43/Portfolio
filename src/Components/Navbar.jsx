@@ -28,7 +28,10 @@ function Navbar() {
   return (
     <div className="flex z-50 justify-between items-center fixed bg-black w-full h-20 text-white md:justify-around ">
       <div>
-        <h1 className="text-3xl pl-2">Mangesh</h1>
+        <h1 className="text-3xl pl-2">
+          <a href="/"
+          >Mangesh</a>
+        </h1>
       </div>
       {/* navbar */}
       <ul className="hidden md:flex">
@@ -37,7 +40,9 @@ function Navbar() {
             key={id}
             className="px-4 cursor-pointer hover:scale-125 duration-100 hover:text-cyan-400 capitalize"
           >
-           <Link to={link} smooth duration={500}>{link}</Link>
+            <Link to={link} smooth duration={500}>
+              {link}
+            </Link>
           </li>
         ))}
       </ul>
@@ -58,7 +63,14 @@ function Navbar() {
            "
               key={id}
             >
-              <Link onClick={()=>setnav(!nav)} to={link} smooth duration={500}>{link}</Link>
+              <Link
+                onClick={() => setnav(!nav)}
+                to={link}
+                smooth
+                duration={500}
+              >
+                {link}
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,27 +1,38 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import HeroImg from "../assets/heroimage.png";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { PiEyeBold } from "react-icons/pi";
-import {Link} from "react-scroll";
-
+import { Link } from "react-scroll";
+import Typed from "typed.js";
 const Home = () => {
+  const el = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [" I&apos;m a Frontend<br> Devloper "],
+      typeSpeed: 100,
+    });
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     // main body div
     <div
       name="Home"
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row ">
+      <div className=" mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row max-w-screen-lg">
         {/* main text div */}
         <div className="flex flex-col justify-center h-1/2 ">
           {/* text div */}
           <h2 className="text-white font-bold text-3xl  sm:text-6xl pb-2">
-            I&#39;m a Front-end Devloper
+            <span ref={el}></span>
           </h2>
-          <p className="text-gray-400 max-w-md">
+          <p className="text-white max-w-md">
             I have 3 years of experience developing websites. Currently, I love
-            to work on web applications using technologies like HTML, CSS,
-            Javascript, React, Tailwind, and Node.js.
+            to work on web applications using technologies and languages like
+            HTML, CSS, Javascript, React, Tailwind, Bootstrap, and Node.js.
           </p>
           <div className="flex flex-row  m-1">
             <Link
@@ -38,9 +49,10 @@ const Home = () => {
 
             <button className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
               <a
-                href="https://docs.google.com/document/d/1646jtZqLFoKTldtvagaAaHVlM3xinFngbJqM5X_pQic/edit?usp=sharing"
+                href="../assets/Mangesh-Lemte_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download="Mangesh-Lemte_Resume.pdf"
               >
                 Resume
               </a>
@@ -50,7 +62,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="">
+        <div className=" ">
           <img
             src={HeroImg}
             alt="My Profile"

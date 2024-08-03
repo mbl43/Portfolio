@@ -11,26 +11,31 @@ const Portfolio = () => {
       id:1n,
       src: Currency,
       link: "https://currency-converter-rt.vercel.app/",
+      name:"Currency Converter"
     },
     {
       id: 2,
       src: Bookstore,
       link: "https://spectacular-dango-a7d490.netlify.app/",
+       name:"Online Book Store"
     },
     {
       id: 3,
       src: Password,
-      link:"https://password-generator-rt.vercel.app/"
+      link:"https://password-generator-rt.vercel.app/",
+      name:"Password Generator"
     },
     {
       id: 4,
       src: Interview,
-      link:"https://mbl43.github.io/Mock-interviewER/"
+      link:"https://mbl43.github.io/Mock-interviewER/",
+      name:"Mock Interviewer"
     },
     {
       id: 5,
       src: PM,
-      link:"https://pm-nextgen-solutions.vercel.app/"
+      link:"https://pm-nextgen-solutions.vercel.app/",
+      name:"Company Website"
     },
   ];
   return (
@@ -48,7 +53,7 @@ const Portfolio = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 overflow-auto">
           {/* structure for card */}
-          {projectlink.map(({ id, src,link }) => (
+          {projectlink.map(({ id, src,link,name }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg m-2">
               <img
                 src={src}
@@ -56,8 +61,8 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105 "
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2  px-6 py-1 m-4 duration-200 hover:scale-105 md:text-3xl">
-                   <a href={link} target="_blank" rel="noopener noreferrer">Demo</a>
+                <button className="w-1/2    py-1 m-4 duration-200 hover:scale-105 md:text-3xl">
+                   <a href={link} target="_blank" rel="noopener noreferrer">{name}</a>
                 </button>
               </div>
             </div>
