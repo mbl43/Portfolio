@@ -77,7 +77,7 @@ const Experience = () => {
   return (
     <div
       name="Experience"
-      className="bg-gradient-to-b from-black to-gray-800 w-full h-screen text-white flex justify-center   md:h-auto "
+      className="bg-gradient-to-b from-black to-gray-800 w-full h-auto text-white flex justify-center   md:h-auto "
     >
       <div className="max-w-screen-xl flex flex-col w-full mx-auto p-4 px-5 h-full">
         <div className=" pb-4  ">
@@ -86,7 +86,7 @@ const Experience = () => {
           </p>
           <br />
 
-          <p className="p-10 sm:text-xl">
+          <p className="p-6 sm:text-xl">
             I have 1.9 years of experience as a web developer at eClerx Services
             Limited, Pune. I have honed my skills in programming languages such
             as HTML, CSS, JavaScript, and Node.js. Additionally, my proficiency

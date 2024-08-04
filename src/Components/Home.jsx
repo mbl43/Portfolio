@@ -22,17 +22,17 @@ const Home = () => {
       name="Home"
       className="h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white"
     >
-      <div className=" mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row max-w-screen-lg">
+      <div className=" mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row max-w-screen-xl">
         {/* main text div */}
         <div className="flex flex-col justify-center h-1/2 ">
           {/* text div */}
-          <h2 className="text-white font-bold text-3xl  sm:text-6xl pb-2">
+          <h2 className="text-white font-bold text-3xl  sm:text-6xl pb-2 ">
             <span ref={el}></span>
           </h2>
           <p className="text-white max-w-md">
             I have 3 years of experience developing websites. Currently, I love
             to work on web applications using technologies and languages like
-            HTML, CSS, Javascript, React, Tailwind, Bootstrap, and Node.js.
+            HTML, CSS, Javascript, React, Tailwind, Bootstrap, Photoshop and Node.js.
           </p>
           <div className="flex flex-row  m-1">
             <Link
@@ -52,7 +52,7 @@ const Home = () => {
                 href="../assets/Mangesh-Lemte_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="Mangesh-Lemte_Resume.pdf"
+                download="/Mangesh-Lemte_Resume.pdf"
               >
                 Resume
               </a>
@@ -62,11 +62,11 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className=" ">
+        <div className="">
           <img
             src={HeroImg}
             alt="My Profile"
-            className="rounded-2xl mx-auto w-3/4 md:full"
+            className="rounded-2xl mx-auto w-3/4  "
           />
         </div>
       </div>
