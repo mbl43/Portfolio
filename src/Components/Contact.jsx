@@ -19,19 +19,19 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="p-4 px-8 text-center bg-transparent border-2 rounded-md   focus:outline-none text-white"
+              className="p-4  text-center bg-transparent border-2 rounded-md   focus:outline-none text-white"
             />
             <input
               type="email"
               name="mail"
               placeholder="Enter your Email"
-              className="p-4 px-8 text-center bg-transparent border-2 rounded-md my-2 focus:outline-none text-white"
+              className="p-4  text-center bg-transparent border-2 rounded-md my-2 focus:outline-none text-white"
             />
             <textarea
               name="text"
               id="" placeholder="Enter your message"
               rows="10"
-              className="border-2 p-4 px-8 text-center  bg-transparent rounded-md focus:outline-none text-white"
+              className="border-2 p-4  text-center  bg-transparent rounded-md focus:outline-none text-white"
             ></textarea>
             <button className="text-white bg-gradient-to-b from-cyan-300 to-blue-500 mx-auto flex items-center rounded-lg hover:scale-110 duration-200 px-6 py-3 mt-4 sm:">
               Let&apos;s Talk
