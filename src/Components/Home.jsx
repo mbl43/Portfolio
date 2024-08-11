@@ -49,10 +49,10 @@ const Home = () => {
 
             <button className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
               <a
-                href="../assets/Mangesh-Lemte_Resume.pdf"
+                href="https://docs.google.com/document/d/1PJ61jp-fA71ksRbuagB3lYVZkM6TDqkwwGXWnVnIPSY/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                download="/Mangesh-Lemte_Resume.pdf"
+                 
               >
                 Resume
               </a>
