@@ -4,14 +4,15 @@ import Password from "../assets/portfolio/passoword.jpg"
 import PM from "../assets/portfolio/pm.png"
 import Interview from "../assets/portfolio/interview.png"
 import Bookstore from "../assets/portfolio/bookstore.png"
+import AI from "../assets/portfolio/ai.png"
 
 const Portfolio = () => {
   const projectlink = [
     {
-      id:1n,
-      src: Currency,
-      link: "https://currency-converter-rt.vercel.app/",
-      name:"Currency Converter"
+      id:1,
+      src: AI,
+      link: "https://text-to-image-jb.vercel.app/",
+      name:"Text To Image AI"
     },
     {
       id: 2,
@@ -32,7 +33,13 @@ const Portfolio = () => {
       name:"Mock Interviewer"
     },
     {
-      id: 5,
+      id:5,
+      src: Currency,
+      link: "https://currency-converter-rt.vercel.app/",
+      name:"Currency Converter"
+    },
+    {
+      id: 6,
       src: PM,
       link:"https://pm-nextgen-solutions.vercel.app/",
       name:"Company Website"
