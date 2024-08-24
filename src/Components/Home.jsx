@@ -30,7 +30,7 @@ const Home = () => {
             <span ref={el}></span>
           </h2>
           <p className="text-white max-w-md">
-            I have 3 years of experience developing websites. Currently, I love
+            I have 2 years of experience developing websites. Currently, I love
             to work on web applications using technologies and languages like
             HTML, CSS, Javascript, React, Tailwind, Bootstrap, Photoshop and Node.js.
           </p>
