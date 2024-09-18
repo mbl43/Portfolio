@@ -5,7 +5,7 @@ import Js from "../assets/javascript.png";
 import Tailwind from "../assets/tailwind.png";
 import Node from "../assets/node.png";
 import react from "../assets/react.png";
-import Appwrite from "../assets/Appwrite.png";
+// import Appwrite from "../assets/Appwrite.png";
 import Vite from "../assets/Vite.png";
 import Bootstrap from "../assets/Bootstrap.png";
 import Photoshop from "../assets/Photoshop.png";
@@ -48,12 +48,7 @@ const Experience = () => {
       text: "React.js",
       style: "shadow-sky-600",
     },
-    {
-      id: 8,
-      src: Appwrite,
-      text: "Appwrite",
-      style: "shadow-red-600",
-    },
+
     {
       id: 9,
       src: Vite,
@@ -90,9 +85,9 @@ const Experience = () => {
             I have 1.9 years of experience as a web developer at eClerx Services
             Limited, Pune. I have honed my skills in programming languages such
             as HTML, CSS, JavaScript, and Node.js. Additionally, my proficiency
-            in frameworks like React.js and Tailwind, Bootstrap as well as tools like Git,
-            Postman, GitHub, and Photoshop, ChatGpt has further enhanced my
-            capabilities as a web developer.
+            in frameworks like React.js and Tailwind, Bootstrap as well as tools
+            like Git, Postman, GitHub, and Photoshop, ChatGpt has further
+            enhanced my capabilities as a web developer.
           </p>
         </div>
         <div className="grid grid-cols-2 w-fit sm:grid-cols-4 md:grid-cols-5 gap-8 px-2 sm:px-0  overflow-auto">
@@ -106,8 +101,9 @@ const Experience = () => {
                 src={src}
                 alt="img"
                 className="rounded-md duration-200 hover:scale-105 w-28"
+                loading="lazy"
               />
-              <div className="w-1/2  px-6 py-3 m-4 flex justify-center items-center    duration-200 hover:scale-105">
+              <div className="w-1/2  px-6 py-3 m-4 flex justify-center items-center text-center    duration-200 hover:scale-105">
                 <span className="md:text-2xl  xsm:text-xl">{text}</span>
               </div>
             </div>

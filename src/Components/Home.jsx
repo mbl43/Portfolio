@@ -49,10 +49,10 @@ const Home = () => {
 
             <button className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
               <a
-                href="https://docs.google.com/document/d/1PJ61jp-fA71ksRbuagB3lYVZkM6TDqkwwGXWnVnIPSY/edit?usp=sharing"
+                href="/src/assets/Mangesh-Lemte_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                 
+                 download="resume"
               >
                 Resume
               </a>
@@ -67,6 +67,7 @@ const Home = () => {
             src={HeroImg}
             alt="My Profile"
             className="rounded-2xl mx-auto w-3/4  "
+            loading="lazy"
           />
         </div>
       </div>

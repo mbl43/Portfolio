@@ -17,7 +17,7 @@ const About = () => {
         <br />
         <p className="md:mx-10 text-lg overflow-auto">
         My daily work involves creating engaging and interactive banner animations, ensuring cross-browser compatibility, and developing reusable, scalable, and optimized code. I actively participate in Agile development processes and enjoy collaborating with teams to deliver projects on time.
-        My technical skills include HTML5, CSS, GSAP.js, Tailwind, JavaScript, WordPress, React.js, Vite, Postman, Appwrite, and Google DevTools. I&apos;m also good at using software like Adobe Photoshop and Figma.
+        My technical skills include HTML5, CSS, GSAP.js, Tailwind, JavaScript, WordPress, React.js, Vite, Postman, and Google DevTools. I&apos;m also good at using software like Adobe Photoshop and Figma.
         </p>
       </div>
     </div>

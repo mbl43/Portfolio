@@ -65,6 +65,7 @@ const Portfolio = () => {
               <img
                 src={src}
                 alt="img"
+                loading="lazy"
                 className="rounded-md duration-200 hover:scale-105 "
               />
               <div className="flex items-center justify-center">
