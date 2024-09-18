@@ -52,7 +52,7 @@ const Home = () => {
                 href="/src/assets/Mangesh-Lemte_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                 download="resume"
+                 download="resume.pdf"
               >
                 Resume
               </a>
