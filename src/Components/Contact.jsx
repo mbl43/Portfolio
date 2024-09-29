@@ -24,12 +24,12 @@ const Contact = () => {
             <input
               type="text"
               name="name"
-              placeholder="Enter your name"
-              className="p-4    bg-transparent border-2 rounded-md   focus:outline-none text-white"
+              placeholder="Enter your name" required
+              className="p-4   bg-transparent border-2 rounded-md   focus:outline-none text-white"
             />
             <input
               type="email"
-              name="mail"
+              name="mail" required
               placeholder="Enter your Email"
               className="p-4    bg-transparent border-2 rounded-md my-2 focus:outline-none text-white"
             />
@@ -37,7 +37,7 @@ const Contact = () => {
               name="text"
               id=""
               placeholder="Enter your message"
-              rows="10"
+              rows="10" required
               className="border-2 p-4    bg-transparent rounded-md focus:outline-none text-white"
             ></textarea>
             <button className="text-white bg-gradient-to-b from-cyan-300 to-blue-500 mx-auto flex items-center rounded-lg hover:scale-110 duration-200 px-6 py-3 mt-4 sm:">

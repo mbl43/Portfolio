@@ -58,8 +58,8 @@ const Portfolio = () => {
           <p className="py-4">Checkout of some my Projects</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 overflow-auto">
-          {/* structure for card */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 sm:px-0 overflow-auto">
+          
           {projectlink.map(({ id, src,link,name }) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg m-2">
               <img
