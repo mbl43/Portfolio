@@ -82,12 +82,14 @@ const Experience = () => {
           <br />
 
           <p className="p-6 sm:text-xl">
-            I have 1.9 years of experience as a web developer at eClerx Services
+            I have 2 years of experience as a web developer at eClerx Services
             Limited, Pune. I have honed my skills in programming languages such
             as HTML, CSS, JavaScript, and Node.js. Additionally, my proficiency
             in frameworks like React.js and Tailwind, Bootstrap as well as tools
             like Git, Postman, GitHub, and Photoshop, ChatGpt has further
             enhanced my capabilities as a web developer.
+             Developed 7 tools using Python, JavaScript, VBScript that significantly reduced workflow time by 15 % and are
+            now utilized by other processes, showcasing efficiency and innovation in workflow management.
           </p>
         </div>
         <div className="grid grid-cols-2 w-fit sm:grid-cols-4 md:grid-cols-5 gap-8 px-2 sm:px-0  overflow-auto">

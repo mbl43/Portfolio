@@ -11,7 +11,7 @@ const About = () => {
           <p className="text-4xl bold inline border-b-4 border-gray-200">About</p>
         </div>
         <p className="md:mx-10 text-lg overflow-auto">
-        I&apos;m a passionate Frontend Web Developer with over 2 years of experience in the field.Graduated with a Bachelor of Technology in Computer Science from Dr. Babasaheb Ambedkar Technological University, achieving a 79.40% score.
+        I&apos;m a passionate Frontend Web Developer with over 2 years of experience in the field.Graduated with a Bachelor of Technology in Computer Science from Dr. Babasaheb Ambedkar Technological University, achieving a 8.44 CGPA.
         Since October 2022, I&apos;ve been working as a Web Developer at eClerx Services LTD in Pune. My expertise lies in developing responsive web banners using HTML, CSS, JavaScript, and GSAP. I&apos;m proficient in various programming languages, frameworks, and tools, including React.js, Tailwind, Node.js, Git, Figma, Postman, GitHub, WordPress, and Photoshop.
         </p>
         <br />
