@@ -40,7 +40,7 @@ const Contact = () => {
               rows="10" required
               className="border-2 p-4    bg-transparent rounded-md focus:outline-none text-white"
             ></textarea>
-            <button className="text-white bg-gradient-to-b from-cyan-300 to-blue-500 mx-auto flex items-center rounded-lg hover:scale-110 duration-200 px-6 py-3 mt-4 sm:">
+            <button className="text-white   bg-blue-700 mx-auto flex items-center rounded-lg hover:scale-105 duration-200 px-6 py-3 mt-4 ">
               Let&apos;s Talk
             </button>
           </form>
