@@ -54,7 +54,7 @@ const Portfolio = () => {
       id: 7,
       src: Hospital,
       link: "https://hospital-landing-page-jb.vercel.app/",
-      name: "Personal PortFolio",
+      name: "Hospital Landing Page",
       Stack: "HTML, CSS, Javascript, Bootstrap",
     },
   ];
