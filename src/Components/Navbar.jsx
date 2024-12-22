@@ -30,7 +30,7 @@ function Navbar() {
       <div>
         <h1 className="text-3xl pl-2">
           <a href="/"
-          >Mangesh</a>
+          >`<Mangesh/>`</a>
         </h1>
       </div>
       {/* navbar */}
