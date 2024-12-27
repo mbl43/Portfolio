@@ -54,7 +54,7 @@ const Portfolio = () => {
       id: 7,
       src: Hospital,
       link: "https://hospital-landing-page-jb.vercel.app/",
-      name: "Personal PortFolio",
+      name: "Hospital Landing Page",
       Stack: "HTML, CSS, Javascript, Bootstrap",
     },
   ];
@@ -75,7 +75,7 @@ const Portfolio = () => {
           {projectlink.map(({ id, src, link, name, Stack }) => (
             <div
               key={id}
-              className="shadow-md shadow-gray-600 rounded-2xl m-1 p-2 w-80  lg:w-11/12"
+              className="shadow-md shadow-gray-600 rounded-2xl m-1 p-2 w-80  lg:w-11/12 flex flex-col"
             >
               <img
                 src={src}
