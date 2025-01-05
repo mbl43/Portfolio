@@ -1,5 +1,12 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  --cursor-color: #fff;
+}
+
+html.dark-mode {
+  --cursor-color: #fff;
 }
