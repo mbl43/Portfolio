@@ -98,7 +98,7 @@ const Experience = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-5">
           {skills.map(({ id, src, text, style }) => (
             <div
               key={id}
@@ -106,7 +106,7 @@ const Experience = () => {
               transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 
               ${style} shadow-lg hover:shadow-xl`}
             >
-              <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center space-y-2">
                 <div className="w-24 h-24 flex items-center justify-center p-4 bg-gray-800/50 rounded-xl">
                   <img
                     src={src}
@@ -116,7 +116,7 @@ const Experience = () => {
                   />
                 </div>
 
-                <h3 className="text-xl font-semibold text-white">{text}</h3>
+                <h3 className="text-base sm:text-xl sm:font-semibold text-center text-white">{text}</h3>
               </div>
 
               {/* Hover Effect Overlay */}
