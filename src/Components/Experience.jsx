@@ -5,23 +5,22 @@ import Js from "../assets/javascript.png";
 import Tailwind from "../assets/tailwind.png";
 import Node from "../assets/node.png";
 import react from "../assets/react.png";
-// import Appwrite from "../assets/Appwrite.png";
 import Vite from "../assets/Vite.png";
 import Bootstrap from "../assets/Bootstrap.png";
 import Photoshop from "../assets/Photoshop.png";
+
 const Experience = () => {
-  const skill = [
+  const skills = [
     {
       id: 1,
       src: Html,
-      text: "Html",
+      text: "HTML",
       style: "shadow-orange-600",
     },
-
     {
       id: 2,
       src: Css,
-      text: "Css",
+      text: "CSS",
       style: "shadow-blue-600",
     },
     {
@@ -48,7 +47,6 @@ const Experience = () => {
       text: "React.js",
       style: "shadow-sky-600",
     },
-
     {
       id: 9,
       src: Vite,
@@ -72,42 +70,60 @@ const Experience = () => {
   return (
     <div
       name="Experience"
-      className="bg-gradient-to-b from-black to-gray-800 w-full h-auto text-white flex justify-center   md:h-auto "
+      className="bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-16"
     >
-      <div className="max-w-screen-xl flex flex-col w-full mx-auto p-4 px-5 h-full">
-        <div className=" pb-4  ">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 ">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header Section */}
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl font-bold inline-block text-white border-b-4 border-gray-500 pb-2 mb-8">
             Experience
-          </p>
-          <br />
+          </h2>
 
-          <p className="p-6 sm:text-xl">
-            I have 2 years of experience as a web developer at eClerx Services
-            Limited, Pune. I have honed my skills in programming languages such
-            as HTML, CSS, JavaScript, and Node.js. Additionally, my proficiency
-            in frameworks like React.js and Tailwind, Bootstrap as well as tools
-            like Git, Postman, GitHub, and Photoshop, ChatGpt has further
-            enhanced my capabilities as a web developer.
-             Developed 7 tools using Python, JavaScript, VBScript that significantly reduced workflow time by 15 % and are
-            now utilized by other processes, showcasing efficiency and innovation in workflow management.
-          </p>
+          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mt-8 text-white">
+            <p className="text-lg md:text-xl leading-relaxed">
+              I have 2 years of experience as a web developer at eClerx Services
+              Limited, Pune. I have honed my skills in programming languages
+              such as HTML, CSS, JavaScript, and Node.js. Additionally, my
+              proficiency in frameworks like React.js and Tailwind, Bootstrap as
+              well as tools like Git, Postman, GitHub, and Photoshop, ChatGpt
+              has further enhanced my capabilities as a web developer.
+            </p>
+            <p className="text-lg md:text-xl leading-relaxed mt-4">
+              Developed 7 tools using Python, JavaScript, VBScript that
+              significantly reduced workflow time by 15% and are now utilized by
+              other processes, showcasing efficiency and innovation in workflow
+              management.
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-2 w-fit sm:grid-cols-4 md:grid-cols-5 gap-8 px-2 sm:px-0  overflow-auto">
-          {/* structure of skill */}
-          {skill.map(({ id, src, text, style }) => (
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {skills.map(({ id, src, text, style }) => (
             <div
               key={id}
-              className={` shadow-md shadow-gray-600 m-2 rounded-lg flex justify-center items-center flex-col ${style}`}
+              className={`group relative bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 
+              transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 
+              ${style} shadow-lg hover:shadow-xl`}
             >
-              <img
-                src={src}
-                alt="img"
-                className="rounded-md duration-200 hover:scale-105 w-28"
-                loading="lazy"
-              />
-              <div className="w-1/2  px-6 py-3 m-4 flex justify-center items-center text-center    duration-200 hover:scale-105">
-                <span className="md:text-2xl  xsm:text-xl">{text}</span>
+              <div className="flex flex-col items-center space-y-4">
+                <div className="w-24 h-24 flex items-center justify-center p-4 bg-gray-800/50 rounded-xl">
+                  <img
+                    src={src}
+                    alt={text}
+                    className="w-full h-full object-contain filter drop-shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+
+                <h3 className="text-xl font-semibold text-white">{text}</h3>
               </div>
+
+              {/* Hover Effect Overlay */}
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent 
+                opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"
+              />
             </div>
           ))}
         </div>
