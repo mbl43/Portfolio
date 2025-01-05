@@ -7,7 +7,7 @@ const About = () => {
       className="w-full min-h-screen bg-gradient-to-b from-black to-gray-800 text-white py-16"
     >
       <div className="max-w-screen-xl p-4 mx-auto max-w-7xl">
-        <div className="pb-8">
+        <div className="pb-8 mx-auto text-center">
           <h2 className="text-4xl font-bold inline border-b-4 border-gray-200">
             About Me
           </h2>
