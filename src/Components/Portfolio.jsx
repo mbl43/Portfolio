@@ -7,7 +7,7 @@ import Interview from "../assets/portfolio/interview.png";
 import Bookstore from "../assets/portfolio/bookstore.png";
 import AI from "../assets/portfolio/ai.png";
 import Hospital from "../assets/portfolio/health.png";
-
+import MyWealth from "../assets/portfolio/mywealth.png";
 const Portfolio = () => {
   const projects = [
     {
@@ -16,23 +16,44 @@ const Portfolio = () => {
       link: "https://text-to-image-jb.vercel.app/",
       name: "Text To Image AI",
       stack: ["HTML", "CSS", "Javascript", "Bootstrap", "API"],
-      description: "AI-powered text to image generation application"
+      description: "AI-powered text to image generation application",
     },
     {
       id: 2,
       src: Bookstore,
       link: "https://spectacular-dango-a7d490.netlify.app/",
       name: "Online Book Store",
-      stack: ["HTML", "CSS", "Javascript", "React.js", "Bootstrap", "React Router"],
-      description: "E-commerce platform for purchasing books online"
+      stack: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React.js",
+        "Bootstrap",
+        "React Router",
+      ],
+      description: "E-commerce platform for purchasing books online",
     },
     {
       id: 3,
-      src: Password,
-      link: "https://password-generator-rt.vercel.app/",
-      name: "Password Generator",
-      stack: ["HTML", "CSS", "Javascript", "React.js", "Tailwind"],
-      description: "Secure password generation tool"
+      src: MyWealth,
+      link: "https://my-wealth.vercel.app/",
+      name: "My Wealth",
+      update:"(In Dev)",
+      stack: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React.js",
+        "Tailwind",
+        "Firebase",
+        "vercel",
+        "email.js",
+        "swiper.js",
+        "Firebase Auth",
+        "React router",
+      ],
+      description:
+        "My Wealth helps users track investments, SIPs, and unclaimed funds while ensuring privacy.",
     },
     {
       id: 4,
@@ -40,7 +61,7 @@ const Portfolio = () => {
       link: "https://mbl43.github.io/Mock-interviewER/",
       name: "Mock Interviewer",
       stack: ["HTML", "CSS", "Javascript"],
-      description: "Practice interview platform with real-time feedback"
+      description: "Practice interview platform with real-time feedback",
     },
     {
       id: 5,
@@ -48,15 +69,22 @@ const Portfolio = () => {
       link: "https://currency-converter-rt.vercel.app/",
       name: "Currency Converter",
       stack: ["HTML", "CSS", "Javascript", "React.js", "Tailwind"],
-      description: "Real-time currency conversion application"
+      description: "Real-time currency conversion application",
     },
     {
       id: 6,
       src: PM,
       link: "https://mangesh-portfolio-rt.vercel.app/",
       name: "Personal Portfolio",
-      stack: ["HTML", "CSS", "Javascript", "React.js", "Tailwind", "React Router"],
-      description: "Professional portfolio website showcasing my work"
+      stack: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "React.js",
+        "Tailwind",
+        "React Router",
+      ],
+      description: "Professional portfolio website showcasing my work",
     },
     {
       id: 7,
@@ -64,7 +92,15 @@ const Portfolio = () => {
       link: "https://hospital-landing-page-jb.vercel.app/",
       name: "Hospital Landing Page",
       stack: ["HTML", "CSS", "Javascript", "Bootstrap"],
-      description: "Modern landing page for healthcare institution"
+      description: "Modern landing page for healthcare institution",
+    },
+    {
+      id: 8,
+      src: Password,
+      link: "https://password-generator-rt.vercel.app/",
+      name: "Password Generator",
+      stack: ["HTML", "CSS", "Javascript", "React.js", "Tailwind"],
+      description: "Secure password generation tool",
     },
   ];
 
@@ -86,11 +122,11 @@ const Portfolio = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {projects.map(({ id, src, link, name, stack, description }) => (
+          {projects.map(({ id, src, link, name, stack, description,update }) => (
             <div
               key={id}
               className="group relative bg-gray-900/30 backdrop-blur-sm rounded-xl overflow-hidden
-              transform transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2"
+              transform transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 border-b-2"
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
@@ -105,7 +141,10 @@ const Portfolio = () => {
 
               {/* Content Container */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">{name}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {name}{" "}
+                  <span className="text-red-500">{update?update:""}</span>
+                </h3>
                 <p className="text-gray-300 text-sm mb-4">{description}</p>
 
                 {/* Tech Stack */}
