@@ -1,69 +1,91 @@
-import React from "react";
-import Html from "../assets/html.png";
-import Css from "../assets/css.png";
-import Js from "../assets/javascript.png";
-import Tailwind from "../assets/tailwind.png";
-import Node from "../assets/node.png";
 import react from "../assets/react.png";
-import Vite from "../assets/Vite.png";
-import Bootstrap from "../assets/Bootstrap.png";
-import Photoshop from "../assets/Photoshop.png";
+import {
+  Bootstrap5,
+  Git,
+  GitHubLight,
+  VercelLightWordmark,
+  Photoshop,
+  ViteJS,
+  CSS,
+  JavaScript,
+  TailwindCSS,
+  NodeJs,
+  HTML5,
+} from "developer-icons";
 
 const Experience = () => {
   const skills = [
     {
       id: 1,
-      src: Html,
+      icon: <HTML5 />,
       text: "HTML",
       style: "shadow-orange-600",
     },
     {
       id: 2,
-      src: Css,
+      icon: <CSS />,
       text: "CSS",
       style: "shadow-blue-600",
     },
     {
       id: 3,
-      src: Js,
+      icon: <JavaScript />,
       text: "JavaScript",
       style: "shadow-yellow-600",
     },
     {
       id: 4,
-      src: Tailwind,
+      icon: <TailwindCSS />,
       text: "Tailwind",
       style: "shadow-blue-400",
     },
     {
       id: 5,
-      src: Node,
+      icon: <NodeJs />,
       text: "Node.js",
       style: "shadow-green-600",
     },
     {
-      id: 7,
+      id: 6,
       src: react,
       text: "React.js",
       style: "shadow-sky-600",
     },
     {
-      id: 9,
-      src: Vite,
+      id: 7,
+      icon: <ViteJS />,
       text: "Vite",
       style: "shadow-yellow-600",
     },
     {
-      id: 10,
-      src: Bootstrap,
+      id: 8,
+      icon: <Bootstrap5 />,
       text: "Bootstrap",
       style: "shadow-purple-600",
     },
     {
-      id: 11,
-      src: Photoshop,
+      id: 9,
+      icon: <Photoshop />,
       text: "Adobe Photoshop",
       style: "shadow-blue-400",
+    },
+    {
+      id: 10,
+      icon: <GitHubLight />,
+      text: "GitHub",
+      style: "shadow-white",
+    },
+    {
+      id: 11,
+      icon: <Git />,
+      text: "Git",
+      style: "shadow-orange-400",
+    },
+    {
+      id: 12,
+      icon: <VercelLightWordmark />,
+      text: "Vercel",
+      style: "shadow-white",
     },
   ];
 
@@ -99,7 +121,7 @@ const Experience = () => {
 
         {/* Skills Grid */}
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-5">
-          {skills.map(({ id, src, text, style }) => (
+          {skills.map(({ id, src, text, style, icon }) => (
             <div
               key={id}
               className={`group relative bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 
@@ -108,15 +130,21 @@ const Experience = () => {
             >
               <div className="flex flex-col items-center space-y-2">
                 <div className="w-24 h-24 flex items-center justify-center p-4 bg-gray-800/50 rounded-xl">
-                  <img
-                    src={src}
-                    alt={text}
-                    className="w-full h-full object-contain filter drop-shadow-lg"
-                    loading="lazy"
-                  />
+                  {src ? (
+                    <img
+                      src={src}
+                      alt={text}
+                      className="w-full h-full object-contain filter drop-shadow-lg"
+                      loading="lazy"
+                    />
+                  ) : (
+                    icon
+                  )}
                 </div>
 
-                <h3 className="text-base sm:text-xl sm:font-semibold text-center text-white">{text}</h3>
+                <h3 className="text-base sm:text-xl sm:font-semibold text-center text-white">
+                  {text}
+                </h3>
               </div>
 
               {/* Hover Effect Overlay */}
