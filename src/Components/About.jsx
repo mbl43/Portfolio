@@ -18,9 +18,7 @@ const About = () => {
           <div>
             <h3 className="text-2xl font-semibold text-blue-400 mb-4">Education</h3>
             <p className="text-lg leading-relaxed">
-              Graduated with a Bachelor of Technology in Computer Science from Dr. Babasaheb 
-              Ambedkar Technological University, achieving a strong academic performance 
-              with an 8.44 CGPA.
+            Graduated in 2022 with a Bachelor of Technology in Computer Science from Dr. Babasaheb Ambedkar Technological University, attaining a commendable academic performance with a CGPA of 8.44.
             </p>
           </div>
 
