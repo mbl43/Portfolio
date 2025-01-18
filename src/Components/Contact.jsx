@@ -41,7 +41,7 @@ const Contact = () => {
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-8 p-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Image and Social Links Section */}
             <div className="space-y-8">
               <div className="relative group">
