@@ -12,7 +12,8 @@ import {
   NodeJs,
   HTML5,
 } from "developer-icons";
-
+import logo from "../assets/portfolio/eclerx.png";
+import { Building2, Calendar } from "lucide-react";
 const Experience = () => {
   const skills = [
     {
@@ -101,21 +102,44 @@ const Experience = () => {
             Experience
           </h2>
 
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mt-8 text-white">
-            <p className="text-lg md:text-xl leading-relaxed">
-              I have 2 years of experience as a web developer at eClerx Services
-              Limited, Pune. I have honed my skills in programming languages
-              such as HTML, CSS, JavaScript, and Node.js. Additionally, my
-              proficiency in frameworks like React.js and Tailwind, Bootstrap as
-              well as tools like Git, Postman, GitHub, and Photoshop, ChatGpt
-              has further enhanced my capabilities as a web developer.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed mt-4">
-              Developed 7 tools using Python, JavaScript, VBScript that
-              significantly reduced workflow time by 15% and are now utilized by
-              other processes, showcasing efficiency and innovation in workflow
-              management.
-            </p>
+          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mt-8 text-white flex sm:flex-row flex-col items-center justify-center text-left space-x-10 w-full gap-10">
+            {/* left */}
+            <div className="sm:w-1/6 w-full flex flex-col items-center justify-center mx-auto space-y-2 ">
+              <img src={logo} alt="eclerx-logo" className="my-4 max-w-[150px] h-auto"/>
+                  <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
+              <div className="text-center sm:text-left">
+                  <div className="flex items-center gap-2 text-gray-300">
+                    <Calendar size={16} />
+                    <p>Oct 2022 - Present</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-300 mt-1">
+                    <Building2 size={16} />
+                    <p>eClerx Services Limited, Pune</p>
+                  </div>
+                </div>
+            </div>
+            {/* right */}
+            <div className="w-5/6">
+              <ul className="list-disc space-y-2">
+                <li className="text-lg leading-relaxed">
+                  I have 2 years of experience as a web developer at eClerx
+                  Services Limited, Pune. I have honed my skills in programming
+                  languages such as HTML, CSS, JavaScript, and Node.js.
+                </li>
+                <li className="text-lg  leading-relaxed">
+                  Additionally, my proficiency in frameworks like React.js and
+                  Tailwind, Bootstrap as well as tools like Git, Postman,
+                  GitHub, and Photoshop, ChatGpt has further enhanced my
+                  capabilities as a web developer.
+                </li>
+                <li className="text-lg leading-relaxed">
+                  Developed 5 tools using Python, JavaScript, VBScript that
+                  significantly reduced workflow time by 15% and are now
+                  utilized by other processes, showcasing efficiency and
+                  innovation in workflow management.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
