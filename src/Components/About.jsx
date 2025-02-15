@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   return (
     <div
@@ -16,44 +14,34 @@ const About = () => {
         <div className="space-y-8 mt-8">
           {/* Education Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-blue-400 mb-4">Education</h3>
+            <h3 className="text-2xl font-semibold text-blue-600 mb-4">Education</h3>
             <p className="text-lg leading-relaxed">
             Graduated in 2022 with a Bachelor of Technology in Computer Science from Dr. Babasaheb Ambedkar Technological University, attaining a commendable academic performance with a CGPA of 8.44.
             </p>
           </div>
 
-          {/* Professional Experience Section */}
-          <div>
-            <h3 className="text-2xl font-semibold text-blue-400 mb-4">Professional Experience</h3>
-            <p className="text-lg leading-relaxed">
-              Currently working as a Web Developer at eClerx Services LTD in Pune since 
-              October 2022, specializing in responsive web banner development and 
-              interactive animations.
-            </p>
-          </div>
-
           {/* Technical Skills Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-blue-400 mb-4">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold text-blue-600 mb-4">Technical Skills</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <h4 className="text-xl font-medium text-gray-300 mb-2">Frontend Development</h4>
+                <h4 className="text-xl font-medium  mb-2 text-blue-300">Frontend Development</h4>
                 <p className="text-lg leading-relaxed">
-                  HTML5, CSS, JavaScript, React.js, Tailwind CSS, GSAP.js
+                  HTML5, CSS, JavaScript, React.js, Tailwind CSS, GSAP.js, TypeScript
                 </p>
               </div>
               <div>
-                <h4 className="text-xl font-medium text-gray-300 mb-2">Backend & Tools</h4>
+                <h4 className="text-xl font-medium  mb-2 text-blue-300">Backend & Tools</h4>
                 <p className="text-lg leading-relaxed">
                   Node.js, Git, GitHub, Postman, Google DevTools
                 </p>
               </div>
               <div>
-                <h4 className="text-xl font-medium text-gray-300 mb-2">CMS</h4>
+                <h4 className="text-xl font-medium  mb-2 text-blue-300">CMS</h4>
                 <p className="text-lg leading-relaxed">WordPress</p>
               </div>
               <div>
-                <h4 className="text-xl font-medium text-gray-300 mb-2">Design Tools</h4>
+                <h4 className="text-xl font-medium  mb-2 text-blue-300">Design Tools</h4>
                 <p className="text-lg leading-relaxed">Adobe Photoshop, Figma</p>
               </div>
             </div>
@@ -61,7 +49,7 @@ const About = () => {
 
           {/* Core Responsibilities Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-blue-400 mb-4">Core Responsibilities</h3>
+            <h3 className="text-2xl font-semibold text-blue-600 mb-4">Core Responsibilities</h3>
             <ul className="list-disc list-inside space-y-2 text-lg">
               <li>Developing engaging and interactive banner animations for web platforms</li>
               <li>Ensuring cross-browser compatibility across different devices and browsers</li>
@@ -72,7 +60,7 @@ const About = () => {
 
           {/* Key Strengths Section */}
           <div>
-            <h3 className="text-2xl font-semibold text-blue-400 mb-4">Key Strengths</h3>
+            <h3 className="text-2xl font-semibold text-blue-600 mb-4">Key Strengths</h3>
             <ul className="list-disc list-inside space-y-2 text-lg">
               <li>Strong focus on responsive design and user experience</li>
               <li>Experience in creating interactive animations using GSAP</li>
