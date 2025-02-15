@@ -106,7 +106,7 @@ const Experience = () => {
             {/* left */}
             <div className="sm:w-1/6 w-full flex flex-col items-center justify-center mx-auto space-y-2 ">
               <img src={logo} alt="eclerx-logo" className="my-4 max-w-[150px] h-auto"/>
-                  <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
+                  <h3 className="text-lg font-semibold mb-2">Frontend Developer</h3>
               <div className="text-center sm:text-left">
                   <div className="flex items-center gap-2 text-gray-300">
                     <Calendar size={16} />
@@ -122,7 +122,7 @@ const Experience = () => {
             <div className="w-5/6">
               <ul className="list-disc space-y-2">
                 <li className="text-lg leading-relaxed">
-                  I have 2 years of experience as a web developer at eClerx
+                  I have 2.2 years of experience as a Frontend developer at eClerx
                   Services Limited, Pune. I have honed my skills in programming
                   languages such as HTML, CSS, JavaScript, and Node.js.
                 </li>
@@ -130,7 +130,14 @@ const Experience = () => {
                   Additionally, my proficiency in frameworks like React.js and
                   Tailwind, Bootstrap as well as tools like Git, Postman,
                   GitHub, and Photoshop, ChatGpt has further enhanced my
-                  capabilities as a web developer.
+                  capabilities as a Frontend developer.
+                </li>
+                <li className="text-lg leading-relaxed">
+                Developed a Task Management Web App using React, improving productivity and workflow efficiency.
+                Designed and Developed Landing Pages for eClerx campaigns, optimizing user engagement and conversion rates.
+                </li>
+                <li className="text-lg leading-relaxed">
+                Designed and Developed Landing Pages for eClerx campaigns, optimizing user engagement and conversion rates.
                 </li>
                 <li className="text-lg leading-relaxed">
                   Developed 5 tools using Python, JavaScript, VBScript that
