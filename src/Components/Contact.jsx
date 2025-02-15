@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form Section */}
-            <div className="flex flex-col justify-center space-y-8">
+            <div className="flex flex-col justify-center space-y-8 mx-4">
               <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Get in Touch
               </h2>
