@@ -49,7 +49,7 @@ const Home = () => {
 
             <button className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
               <a
-                href="/public/Mangesh_Lemte_Resume.pdf"
+                href="https://drive.google.com/file/d/1tC87gJzVWuso6pPkxKkIeL65YiehcLDV/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                  download="resume.pdf"
