@@ -30,7 +30,7 @@ const Home = () => {
             <span ref={el}></span>
           </h2>
           <p className="text-white max-w-md">
-            I have 2.2 years of experience developing websites. Currently, I love
+            I have 2.4 years of experience developing websites. Currently, I love
             to work on web applications using technologies and languages like
             HTML, CSS, Javascript, React, Tailwind, Bootstrap, Photoshop and Node.js.
           </p>
@@ -49,7 +49,7 @@ const Home = () => {
 
             <button className="group text-white w-fit px-4 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
               <a
-                href="https://drive.google.com/file/d/1tC87gJzVWuso6pPkxKkIeL65YiehcLDV/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1q51_1tleCW1HbKvl_wUs3nq42VQ1LJ8r/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                  download="resume.pdf"
