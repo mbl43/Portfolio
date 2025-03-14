@@ -29,7 +29,7 @@ function Navbar() {
   return (
     <div className="flex z-50 justify-between items-center bg-black w-full h-20 text-white md:justify-around sticky backdrop-filter backdrop-blur-sm bg-opacity-35 top-0">
       <div>
-        <h1 className="text-3xl pl-2 ">
+        <h1 className="text-xl md:text-3xl pl-2">
           <a href="/"
           >{"< Mangesh />"}</a>
         </h1>
