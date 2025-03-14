@@ -122,7 +122,7 @@ const Experience = () => {
             <div className="w-5/6">
               <ul className="list-disc space-y-2">
                 <li className="text-lg leading-relaxed">
-                  I have 2.2 years of experience as a Frontend developer at eClerx
+                  I have 2.4 years of experience as a Frontend developer at eClerx
                   Services Limited, Pune. I have honed my skills in programming
                   languages such as HTML, CSS, JavaScript, and Node.js.
                 </li>
