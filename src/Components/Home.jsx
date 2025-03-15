@@ -29,9 +29,9 @@ const Home = () => {
   return (
     <div
       name="Home"
-      className="h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white"
+      className="h-[calc(100vh-80px)] w-full bg-gradient-to-b from-black to-gray-800 text-white"
     >
-      <div className="mx-auto flex flex-col items-center md:justify-center h-full px-4 md:flex-row max-w-screen-xl">
+      <div className="mx-auto flex flex-col items-center md:justify-center h-[calc(100vh-100px)] px-4 md:flex-row ">
         {/* Main text div */}
         <div className="flex flex-col justify-center py-16">
           <h2 className="text-white font-bold text-3xl sm:text-6xl pb-2">
