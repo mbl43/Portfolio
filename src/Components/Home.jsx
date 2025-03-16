@@ -4,16 +4,9 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import { PiEyeBold } from "react-icons/pi";
 import { Link } from "react-scroll";
 import Typed from "typed.js";
-import Loader from "./Loader";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
   const el = useRef(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -70,16 +63,12 @@ const Home = () => {
 
         {/* Image section */}
         <div className="flex">
-          {!loading ? (
-            <img
-              src={HeroImg}
-              alt="My Profile"
-              className="rounded-2xl mx-auto w-3/4"
-              loading="lazy"
-            />
-          ) : (
-            <Loader />
-          )}
+          <img
+            src={HeroImg}
+            alt="My Profile"
+            className="rounded-2xl mx-auto w-3/4"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
