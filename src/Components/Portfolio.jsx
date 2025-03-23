@@ -15,7 +15,7 @@ const Portfolio = () => {
       id: 1,
       src: AI,
       link: "https://text-to-image-jb.vercel.app/",
-      name: "Text To Image AI",
+      name: "AI Image Generator",
       stack: ["HTML", "CSS", "Javascript", "Bootstrap", "API"],
       description: "AI-powered text to image generation application",
     },
