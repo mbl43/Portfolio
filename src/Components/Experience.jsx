@@ -1,4 +1,5 @@
 import react from "../assets/react.png";
+import { motion } from "framer-motion";
 import {
   Bootstrap5,
   Git,
@@ -67,7 +68,7 @@ const Experience = () => {
     {
       id: 9,
       icon: <Photoshop />,
-      text: "Adobe Photoshop",
+      text: "Photoshop",
       style: "shadow-blue-400",
     },
     {
@@ -159,37 +160,43 @@ const Experience = () => {
         {/* Skills Grid */}
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-5">
           {skills.map(({ id, src, text, style, icon }) => (
-            <div
-              key={id}
-              className={`group relative bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 
-              transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 
-              ${style} shadow-lg hover:shadow-xl`}
+            <motion.div
+              key={id} // ✅
+              initial={{ opacity: 0, y: 50 }} // Start hidden
+              whileInView={{ opacity: 1, y: 0 }} // Animate into view
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is visible
             >
-              <div className="flex flex-col items-center space-y-2">
-                <div className="w-24 h-24 flex items-center justify-center p-4 bg-gray-800/50 rounded-xl">
-                  {src ? (
-                    <img
-                      src={src}
-                      alt={text}
-                      className="w-full h-full object-contain filter drop-shadow-lg"
-                      loading="lazy"
-                    />
-                  ) : (
-                    icon
-                  )}
+              <div
+                className={`group relative bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 
+        transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 
+        ${style} shadow-lg hover:shadow-xl`}
+              >
+                <div className="flex flex-col items-center space-y-2">
+                  <div className="w-24 h-24 flex items-center justify-center p-4 bg-gray-800/50 rounded-xl">
+                    {src ? (
+                      <img
+                        src={src}
+                        alt={text}
+                        className="w-full h-full object-contain filter drop-shadow-lg"
+                        loading="lazy"
+                      />
+                    ) : (
+                      icon
+                    )}
+                  </div>
+                  <h3 className="text-base sm:text-xl sm:font-semibold text-center text-white">
+                    {text}
+                  </h3>
                 </div>
 
-                <h3 className="text-base sm:text-xl sm:font-semibold text-center text-white">
-                  {text}
-                </h3>
+                {/* Hover Effect Overlay */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent 
+          opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"
+                />
               </div>
-
-              {/* Hover Effect Overlay */}
-              <div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent 
-                opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"
-              />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
