@@ -7,7 +7,7 @@ import PM from "../assets/portfolio/pm.png";
 import Interview from "../assets/portfolio/interview.png";
 import Bookstore from "../assets/portfolio/bookstore.png";
 import AI from "../assets/portfolio/ai.png";
-import Hospital from "../assets/portfolio/health.png";
+import ReportScam from "../assets/portfolio/reportscam.png";
 import MyWealth from "../assets/portfolio/mywealth.png";
 import Calc from "../assets/portfolio/calc.png";
 const Portfolio = () => {
@@ -59,12 +59,22 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      src: Calc,
-      link: "https://github.com/mbl43/Web-Calculator-Extension/blob/main/README.md",
-      name: "Web Calculator Extension",
-      stack: ["HTML", "CSS", "Javascript"],
-      description: `This web calculator extension lets you quickly divide prices in your browser. Right-click a price, select division, enter the quantity, and get instant results—perfect for hassle-free shopping! `,
+      src: ReportScam,
+      link: "https://report-scam.vercel.app/",
+      name: "Report Scam",
+      stack: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Bootstrap",
+        "React",
+        "Vercel",
+        "Supabase",
+      ],
+      description:
+        "The ReportScam lets users anonymously share scam experiences.",
     },
+
     {
       id: 5,
       src: Interview,
@@ -98,11 +108,11 @@ const Portfolio = () => {
     },
     {
       id: 8,
-      src: Hospital,
-      link: "https://hospital-landing-page-jb.vercel.app/",
-      name: "Hospital Landing Page",
-      stack: ["HTML", "CSS", "Javascript", "Bootstrap"],
-      description: "Modern landing page for healthcare institution",
+      src: Calc,
+      link: "https://github.com/mbl43/Web-Calculator-Extension/blob/main/README.md",
+      name: "Web Calculator Extension",
+      stack: ["HTML", "CSS", "Javascript"],
+      description: `This web calculator extension lets you quickly divide prices in your browser. Right-click a price, select division, enter the quantity, and get instant results—perfect for hassle-free shopping! `,
     },
     {
       id: 9,
