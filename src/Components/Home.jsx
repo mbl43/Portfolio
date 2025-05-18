@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import HeroImg from "../assets/heroimage.png";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { PiEyeBold } from "react-icons/pi";
 import { Link } from "react-scroll";
 import Typed from "typed.js";
 
-const Home = () => {
+const Home = ({experience}) => {
   const el = useRef(null);
 
   useEffect(() => {
@@ -31,9 +31,9 @@ const Home = () => {
             <span ref={el}></span>
           </h2>
           <p className="text-white max-w-md">
-            I have 2.4 years of experience developing websites. Currently, I
+            I have {experience} years of experience developing websites. Currently, I
             love working on web applications using technologies like HTML, CSS,
-            JavaScript, React, Tailwind, Bootstrap, Photoshop, and Node.js.
+            JavaScript, React, Tailwind, Bootstrap, Photoshop, NextJs, TypeScript and Node.js.
           </p>
           <div className="flex gap-4 mt-4">
             <Link
