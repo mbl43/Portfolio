@@ -4,13 +4,28 @@
   margin: 0;
 }
 html {
-  --cursor-color: #fff;
+  --cursor-color: #000;
 }
 
-html.dark-mode {
+html.dark{
   --cursor-color: #fff;
 }
-body
-{
-  background-color: black;
+:root {
+  --gradient: linear-gradient(to bottom, #ffffff, #f3f4f6); /* white to gray-100 */
+  --text-color: #000000;
+  --primary-color: #ffffff;
+  --secondary-color:#2962DC;
+}
+
+body.dark {
+  --gradient: linear-gradient(to bottom, #000000, #1f2937); 
+  --text-color: #ffff;
+  --primary-color: #000000;
+  --cursor-color: #fff;
+  --secondary-color:#2962DC;
+}
+
+body {
+  background-color: var(--primary-color);
+  transition: background-color 0.1s ease, color 0.1s ease;
 }
