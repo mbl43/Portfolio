@@ -5,7 +5,7 @@ import { PiEyeBold } from "react-icons/pi";
 import { Link } from "react-scroll";
 import Typed from "typed.js";
 
-const Home = ({experience}) => {
+const Home = ({ experience }) => {
   const el = useRef(null);
 
   useEffect(() => {
@@ -24,16 +24,17 @@ const Home = ({experience}) => {
       name="Home"
       className="h-[calc(100vh-80px)] w-full bg-gradient-to-b from-black to-gray-800 text-white"
     >
-      <div className="mx-auto flex flex-col items-center md:justify-center h-[calc(100vh-100px)] px-4 md:flex-row ">
+      <div className="mx-auto flex flex-col items-center md:justify-center h-[calc(100vh-100px)] px-4 md:flex-row">
         {/* Main text div */}
-        <div className="flex flex-col justify-center py-16">
+        <div className="flex flex-col justify-center p-16">
           <h2 className="text-white font-bold text-3xl sm:text-6xl pb-2">
             <span ref={el}></span>
           </h2>
           <p className="text-white max-w-md">
-            I have {experience} years of experience developing websites. Currently, I
-            love working on web applications using technologies like HTML, CSS,
-            JavaScript, React, Tailwind, Bootstrap, Photoshop, NextJs, TypeScript and Node.js.
+            I have {experience} years of experience developing websites.
+            Currently, I love working on web applications using technologies
+            like HTML, CSS, JavaScript, React, Tailwind, Bootstrap, Photoshop,
+            NextJs, TypeScript and Node.js.
           </p>
           <div className="flex gap-4 mt-4">
             <Link
@@ -62,11 +63,11 @@ const Home = ({experience}) => {
         </div>
 
         {/* Image section */}
-        <div className="flex">
+        <div className="flex w-[300px] h-[300px] md:w-[400px] md:h-[400px] items-center justify-center">
           <img
             src={HeroImg}
             alt="My Profile"
-            className="rounded-2xl mx-auto w-3/4"
+            className="rounded-2xl w-full h-full object-cover"
             loading="lazy"
           />
         </div>

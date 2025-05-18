@@ -25,5 +25,4 @@ body.dark {
 
 body {
   background-color: black;
-  transition: background-color 0.1s ease, color 0.1s ease;
 }
