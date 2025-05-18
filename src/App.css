@@ -4,12 +4,9 @@
   margin: 0;
 }
 html {
-  --cursor-color: #000;
+  --cursor-color: white;
 }
 
-html.dark{
-  --cursor-color: #fff;
-}
 :root {
   --gradient: linear-gradient(to bottom, #ffffff, #f3f4f6); /* white to gray-100 */
   --text-color: #000000;
@@ -25,7 +22,8 @@ body.dark {
   --secondary-color:#2962DC;
 }
 
+
 body {
-  background-color: var(--primary-color);
+  background-color: black;
   transition: background-color 0.1s ease, color 0.1s ease;
 }
