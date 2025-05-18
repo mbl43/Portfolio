@@ -27,7 +27,7 @@ const About = () => {
               <div>
                 <h4 className="text-xl font-medium  mb-2 text-blue-300">Frontend Development</h4>
                 <p className="text-lg leading-relaxed">
-                  HTML5, CSS, JavaScript, React.js, Tailwind CSS, GSAP.js, TypeScript
+                  HTML5, CSS, JavaScript, React.js, Tailwind CSS, GSAP.js, TypeScript, NextJs, Material UI, Aceternity UI
                 </p>
               </div>
               <div>
