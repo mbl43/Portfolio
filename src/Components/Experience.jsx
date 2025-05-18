@@ -12,10 +12,14 @@ import {
   TailwindCSS,
   NodeJs,
   HTML5,
+  NextJs,
+  Figma,
+  TypeScript,
+  MaterialUI,
 } from "developer-icons";
 import logo from "../assets/portfolio/eclerx.png";
 import { Building2, Calendar } from "lucide-react";
-const Experience = () => {
+const Experience = ({experience}) => {
   const skills = [
     {
       id: 1,
@@ -89,6 +93,31 @@ const Experience = () => {
       text: "Vercel",
       style: "shadow-white",
     },
+    {
+      id: 13,
+      icon: <NextJs />,
+      text: "NextJs",
+      style: "shadow-white",
+    },
+    {
+      id: 14,
+      icon: <Figma />,
+      text: "Figma",
+      style: "shadow-orange-600 ",
+    },
+    {
+      id: 15,
+      icon: <TypeScript />,
+      text: "TypeScript",
+      style: "shadow-blue-600 ",
+    },
+    {
+      id: 15,
+      icon: <MaterialUI />,
+      text: "Material UI",
+      style: "shadow-blue-600 ",
+    },
+    
   ];
 
   return (
@@ -127,10 +156,16 @@ const Experience = () => {
             <div className="w-full sm:w-5/6">
               <ul className="list-disc space-y-2">
                 <li className="text-lg leading-relaxed">
-                  I have 2.4 years of experience as a Frontend developer at
-                  eClerx Services Limited, Pune. I have honed my skills in
+                  I have {experience} years of experience as a Frontend developer at
+                  eClerx Services Limited, Pune. I have Gained experience in 
                   programming languages such as HTML, CSS, JavaScript, and
                   Node.js.
+                </li>
+                <li className="text-lg leading-relaxed">
+                Developed and maintained responsive landing pages for various eClerx campaigns, resulting in improved user engagement and better conversion rates.
+                </li>
+                <li className="text-lg leading-relaxed">
+                 Built a Task Management Web App using React.js, boosting team productivity and streamlining internal workflows.
                 </li>
                 <li className="text-lg  leading-relaxed">
                   Additionally, my proficiency in frameworks like React.js and
@@ -139,18 +174,7 @@ const Experience = () => {
                   capabilities as a Frontend developer.
                 </li>
                 <li className="text-lg leading-relaxed">
-                  Developed a Task Management Web App using React, improving
-                  productivity and workflow efficiency.
-                </li>
-                <li className="text-lg leading-relaxed">
-                  Designed and Developed Landing Pages for eClerx campaigns,
-                  optimizing user engagement and conversion rates.
-                </li>
-                <li className="text-lg leading-relaxed">
-                  Developed 5 tools using Python, JavaScript, VBScript that
-                  significantly reduced workflow time by 15% and are now
-                  utilized by other processes, showcasing efficiency and
-                  innovation in workflow management.
+              Created 5 automation tools using Python, JavaScript, and VBScript that cut down process time by 15%, now utilized by other processes, showcasing efficiency and innovation in workflow management.
                 </li>
               </ul>
             </div>
