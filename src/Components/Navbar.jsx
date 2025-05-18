@@ -33,7 +33,6 @@ function Navbar() {
         </h1>
       </div>
       {/* navbar */}
-      <Switch/>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li
