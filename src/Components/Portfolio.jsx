@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Currency from "../assets/portfolio/currency.png";
-import Password from "../assets/portfolio/passoword.jpg";
 import PM from "../assets/portfolio/pm.png";
 import Interview from "../assets/portfolio/interview.png";
 import Bookstore from "../assets/portfolio/bookstore.png";
@@ -113,15 +112,7 @@ const Portfolio = () => {
       name: "Web Calculator Extension",
       stack: ["HTML", "CSS", "Javascript"],
       description: `This web calculator extension lets you quickly divide prices in your browser. Right-click a price, select division, enter the quantity, and get instant results—perfect for hassle-free shopping! `,
-    },
-    {
-      id: 9,
-      src: Password,
-      link: "https://password-generator-rt.vercel.app/",
-      name: "Password Generator",
-      stack: ["HTML", "CSS", "Javascript", "React.js", "Tailwind"],
-      description: "Secure password generation tool",
-    },
+    }
   ];
 
   return (
