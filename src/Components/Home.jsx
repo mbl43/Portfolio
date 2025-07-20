@@ -26,7 +26,7 @@ const Home = ({ experience }) => {
     >
       <div className="mx-auto flex flex-col items-center md:justify-center h-[calc(100vh-100px)] px-4 md:flex-row">
         {/* Main text div */}
-        <div className="flex flex-col justify-center p-16">
+        <div className="flex flex-col justify-center p-3 md:p-16">
           <h2 className="text-white font-bold text-3xl sm:text-6xl pb-2">
             <span ref={el}></span>
           </h2>
@@ -63,7 +63,7 @@ const Home = ({ experience }) => {
         </div>
 
         {/* Image section */}
-        <div className="flex w-[300px] h-[300px] md:w-[400px] md:h-[400px] items-center justify-center">
+        <div className="flex w-[250px] h-[250px] md:w-[400px] md:h-[400px] items-center justify-center">
           <img
             src={HeroImg}
             alt="My Profile"
