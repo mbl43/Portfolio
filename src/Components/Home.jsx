@@ -63,7 +63,7 @@ const Home = ({ experience }) => {
         </div>
 
         {/* Image section */}
-        <div className="flex w-[250px] h-[250px] md:w-[400px] md:h-[400px] items-center justify-center">
+        <div className="flex w-[250px] h-[250px] md:w-[400px] md:h-[400px] items-center justify-center pt-4 md:pt-0">
           <img
             src={HeroImg}
             alt="My Profile"
