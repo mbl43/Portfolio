@@ -11,15 +11,7 @@ import MyWealth from "../assets/portfolio/mywealth.png";
 import Calc from "../assets/portfolio/calc.png";
 const Portfolio = () => {
   const projects = [
-    {
-      id: 1,
-      src: AI,
-      link: "https://text-to-image-jb.vercel.app/",
-      name: "AI Image Generator",
-      stack: ["HTML", "CSS", "Javascript", "Bootstrap", "API"],
-      description: "AI-powered text to image generation application",
-    },
-    {
+       {
       id: 2,
       src: Bookstore,
       link: "https://spectacular-dango-a7d490.netlify.app/",
@@ -73,23 +65,6 @@ const Portfolio = () => {
       description:
         "The ReportScam lets users anonymously share scam experiences.",
     },
-
-    {
-      id: 5,
-      src: Interview,
-      link: "https://mbl43.github.io/Mock-interviewER/",
-      name: "Mock Interviewer",
-      stack: ["HTML", "CSS", "Javascript"],
-      description: "Practice interview platform with real-time feedback",
-    },
-    {
-      id: 6,
-      src: Currency,
-      link: "https://currency-converter-rt.vercel.app/",
-      name: "Currency Converter",
-      stack: ["HTML", "CSS", "Javascript", "React.js", "Tailwind"],
-      description: "Real-time currency conversion application",
-    },
     {
       id: 7,
       src: PM,
@@ -105,14 +80,6 @@ const Portfolio = () => {
       ],
       description: "Professional portfolio website showcasing my work",
     },
-    {
-      id: 8,
-      src: Calc,
-      link: "https://github.com/mbl43/Web-Calculator-Extension/blob/main/README.md",
-      name: "Web Calculator Extension",
-      stack: ["HTML", "CSS", "Javascript"],
-      description: `This web calculator extension lets you quickly divide prices in your browser. Right-click a price, select division, enter the quantity, and get instant results—perfect for hassle-free shopping! `,
-    }
   ];
 
   return (
