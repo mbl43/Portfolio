@@ -82,15 +82,15 @@ const Portfolio = () => {
   return (
     <div
       name="Portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-16"
+      className="bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-12"
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold inline-block text-white border-b-4 border-gray-400 pb-2">
+        <div className="mb-10">
+          <h2 className="text-5xl font-bold inline-block text-white border-l-8 border-orange-400 pb-2 pl-4">
             Portfolio
           </h2>
-          <p className="text-gray-300 text-lg mt-6">
+          <p className="text-gray-300 text-lg mt-4">
             Explore my latest projects and technical work
           </p>
         </div>

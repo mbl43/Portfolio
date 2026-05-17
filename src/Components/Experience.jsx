@@ -123,12 +123,12 @@ const Experience = ({experience}) => {
   return (
     <div
       name="Experience"
-      className="bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-16"
+      className="bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-12"
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <div className="mb-16 text-center">
-          <h2 className="text-4xl font-bold inline-block text-white border-b-4 border-gray-500 pb-2 mb-8">
+        <div className="mb-16">
+           <h2 className="text-5xl font-bold inline-block text-white border-l-8 border-orange-400 pb-2 pl-4">
             Experience
           </h2>
 
