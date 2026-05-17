@@ -5,4 +5,5 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import Experience from "./Experience";
 import Contact from "./Contact.jsx"
-export { Home, Navbar, Social ,About,Portfolio,Experience,Contact};
+import Overlay from "./Overlay.jsx";
+export { Home, Navbar, Social ,About,Portfolio,Experience,Contact,Overlay};

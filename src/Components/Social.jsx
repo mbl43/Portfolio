@@ -1,6 +1,4 @@
-import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { GitHubLight, Gmail, LinkedIn } from "developer-icons";
 
 const Social = () => {
   const links = [
@@ -8,7 +6,7 @@ const Social = () => {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={30} />
+          LinkedIn <LinkedIn size={30} />
         </>
       ),
       href: "https://www.linkedin.com/in/mangesh-lemte",
@@ -18,7 +16,7 @@ const Social = () => {
       id: 2,
       child: (
         <>
-          Github <FaGithub size={30} />
+          Github <GitHubLight size={30} />
         </>
       ),
       href: "https://www.github.com/mbl43",
@@ -27,7 +25,7 @@ const Social = () => {
       id: 3,
       child: (
         <>
-          Mail <HiOutlineMail size={30} />
+          Mail <Gmail size={28} />
         </>
       ),
       href: "mailto:mangeshlemte.a23@gmail.com",
@@ -39,7 +37,7 @@ const Social = () => {
         {links.map(({ id, child, href }) => (
           <li
             key={id}
-            className="flex items-center rounded-2xl justify-between w-40 h-14 px-4  ml-[-111px] bg-gray-500 hover:ml-0
+            className="flex items-center rounded-3xl justify-between w-40 h-14 px-3  ml-[-109px] bg-gray-800 hover:ml-0 my-1
          hover:rounded-md duration-300"
           >
             <a

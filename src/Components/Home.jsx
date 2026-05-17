@@ -1,79 +1,93 @@
-import { useEffect, useRef } from "react";
-import HeroImg from "../assets/heroimage.png";
-import { FaArrowCircleRight } from "react-icons/fa";
-import { PiEyeBold } from "react-icons/pi";
-import { Link } from "react-scroll";
-import Typed from "typed.js";
+import { useEffect, useRef, useState } from 'react';
+import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
-const Home = ({ experience }) => {
-  const el = useRef(null);
+const FRAME_COUNT = 120;
 
+export default function ScrollyCanvas({ heroRef }) {
+  const canvasRef = useRef(null);
+  const imagesRef = useRef([]);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end end'],
+  });
+
+  const frameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT - 1]);
+
+  // Parallel image preload
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["I'm a Frontend<br>Developer"],
-      typeSpeed: 100,
+    let cancelled = false;
+    let loadedCount = 0;
+
+    const promises = Array.from({ length: FRAME_COUNT }, (_, i) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        const padded = i.toString().padStart(3, '0');
+        img.src = `/src/assets/sequence/frame_${padded}_delay-0.067s.webp`;
+        const done = () => {
+          if (cancelled) return;
+          loadedCount++;
+          setImagesLoaded(loadedCount);
+          resolve(img);
+        };
+        img.onload = done;
+        img.onerror = done;
+        imagesRef.current[i] = img;
+      });
     });
 
+    Promise.all(promises);
     return () => {
-      typed.destroy();
+      cancelled = true;
     };
   }, []);
 
+  const drawImage = (index) => {
+    const canvas = canvasRef.current;
+    const img = imagesRef.current[index];
+    if (!canvas || !img || !img.complete || img.naturalWidth === 0) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const parent = canvas.parentElement;
+    if (parent) {
+      if (canvas.width !== parent.clientWidth || canvas.height !== parent.clientHeight) {
+        canvas.width = parent.clientWidth;
+        canvas.height = parent.clientHeight;
+      }
+    }
+
+    const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+    const x = canvas.width / 2 - (img.width / 2) * scale;
+    const y = canvas.height / 2 - (img.height / 2) * scale;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+  };
+
+  useEffect(() => {
+    if (imagesLoaded > 0) drawImage(Math.round(frameIndex.get()));
+  }, [imagesLoaded, frameIndex]);
+
+  useEffect(() => {
+    const handleResize = () => drawImage(Math.round(frameIndex.get()));
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [frameIndex]);
+
+  useMotionValueEvent(frameIndex, 'change', (latest) => {
+    requestAnimationFrame(() => drawImage(Math.round(latest)));
+  });
+
   return (
-    <div
-      name="Home"
-      className="h-[calc(100vh-80px)] w-full bg-gradient-to-b from-black to-gray-800 text-white"
-    >
-      <div className="mx-auto flex flex-col items-center md:justify-center h-[calc(100vh-100px)] px-4 md:flex-row">
-        {/* Main text div */}
-        <div className="flex flex-col justify-center p-3 md:p-16">
-          <h2 className="text-white font-bold text-3xl sm:text-6xl pb-2">
-            <span ref={el}></span>
-          </h2>
-          <p className="text-white max-w-md">
-            I have {experience} years of experience developing websites.
-            Currently, I love working on web applications using technologies
-            like HTML, CSS, JavaScript, React, Tailwind, Bootstrap, Photoshop,
-            NextJs, TypeScript and Node.js.
-          </p>
-          <div className="flex gap-4 mt-4">
-            <Link
-              to="Portfolio"
-              smooth
-              duration={500}
-              className="group text-white w-fit px-4 py-3 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
-            >
-              Portfolio
-              <FaArrowCircleRight
-                size={20}
-                className="ml-2 group-hover:rotate-90 duration-500"
-              />
-            </Link>
-
-            <a
-              href="https://drive.google.com/file/d/1q51_1tleCW1HbKvl_wUs3nq42VQ1LJ8r/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group text-white w-fit px-4 py-3 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500"
-            >
-              Resume
-              <PiEyeBold size={20} className="ml-2 group-hover:scale-125" />
-            </a>
-          </div>
+    <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
+      {imagesLoaded < FRAME_COUNT && (
+        <div className="absolute inset-0 z-50 bg-[#0d0d0d] flex items-center justify-center text-white text-sm font-mono tracking-widest">
+          LOADING {Math.floor((imagesLoaded / FRAME_COUNT) * 100)}%
         </div>
-
-        {/* Image section */}
-        <div className="flex w-[280px] h-[280px] md:w-[400px] md:h-[400px] items-center justify-center pt-8 md:pt-0">
-          <img
-            src={HeroImg}
-            alt="My Profile"
-            className="rounded-2xl w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
+      )}
+      <canvas ref={canvasRef} className="w-full h-full block" />
     </div>
   );
-};
-
-export default Home;
+}

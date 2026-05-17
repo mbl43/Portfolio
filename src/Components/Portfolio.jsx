@@ -1,14 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
-import Currency from "../assets/portfolio/currency.png";
+import {ExternalLink} from "lucide-react";
+import { GitHubLight } from "developer-icons";
 import PM from "../assets/portfolio/pm.png";
-import Interview from "../assets/portfolio/interview.png";
 import Bookstore from "../assets/portfolio/bookstore.png";
-import AI from "../assets/portfolio/ai.png";
 import ReportScam from "../assets/portfolio/reportscam.png";
 import MyWealth from "../assets/portfolio/mywealth.png";
-import Calc from "../assets/portfolio/calc.png";
 const Portfolio = () => {
   const projects = [
        {
@@ -160,7 +157,7 @@ const Portfolio = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors duration-300"
                     >
-                      <Github className="w-4 h-4" />
+                      <GitHubLight className="w-4 h-4" />
                       <span className="text-sm">Source Code</span>
                     </a>
                   </div>
