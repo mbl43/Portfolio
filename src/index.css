@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- 
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Playwrite+AU+TAS:wght@100..400&family=Playwrite+HR:wght@100..400&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+  
 /* index.css or App.css */
 * {
     box-sizing: border-box;
@@ -13,16 +11,101 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base
-{
-    html
-    {
-        font-family: "Poppins", sans-serif;
-    }
-    h1
-    {
-        font-family: "Playwrite HR", cursive;
-    }
-   
+@layer base {
+  html {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: #0d0d0d;
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+  }
+  body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+  }
 }
- 
+
+@layer components {
+  /* Floating frosted-glass pill — used by Navbar */
+  .glass-pill {
+    background: rgba(20, 20, 22, 0.55);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.02),
+      0 16px 48px -12px rgba(0, 0, 0, 0.6),
+      0 4px 16px -4px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Frosted-glass surface — used by Service & Course cards */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 8px 32px -8px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 16px 48px -12px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Liquid-glass watermark text — gradient fill + idle subtle, hover chromatic refraction */
+  .watermark-glass {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.22) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 80px rgba(255, 255, 255, 0.04));
+    transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                letter-spacing 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .watermark-glass:hover {
+    /* Subtle chromatic aberration — red shifts one way, blue the other, like light refracting through glass */
+    filter:
+      drop-shadow(-2px 0 0 rgba(255, 90, 110, 0.35))
+      drop-shadow(2px 0 0 rgba(90, 160, 255, 0.35))
+      drop-shadow(0 0 60px rgba(255, 255, 255, 0.12));
+    letter-spacing: -0.045em;
+  }
+
+  /* Solid-white CTA pill — used in Navbar and Footer for consistency */
+  .pill-cta {
+    background: #ffffff;
+    color: #0d0d0d;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.08),
+      0 4px 16px -4px rgba(0, 0, 0, 0.3);
+  }
+  .pill-cta:hover {
+    background: #ff6b35;
+    color: #ffffff;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      0 8px 24px -4px rgba(255, 107, 53, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

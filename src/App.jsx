@@ -5,12 +5,14 @@ import {
   Home,
   Navbar,
   Portfolio,
-  Social,
+  Overlay,
+  Social
 } from "./Components/index";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 function App() {
+  const heroRef = useRef(null);
   const[experience,setExperience]=useState('2')
    useEffect(() => {
     const calculateExperience = () => {
@@ -34,7 +36,11 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <Home experience={experience}/>
+
+      <div ref={heroRef} className="relative w-full" style={{ height: '600vh' }}>
+      <Home experience={experience}heroRef={heroRef}/>
+      <Overlay heroRef={heroRef} />
+      </div>
       <Portfolio />
       <Experience experience={experience} />
       <Social />
