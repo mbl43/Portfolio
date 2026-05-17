@@ -6,46 +6,51 @@ import {
   Navbar,
   Portfolio,
   Overlay,
-  Social
+  Social,
 } from "./Components/index";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 import { useEffect, useRef, useState } from "react";
-function App() {
-  const heroRef = useRef(null);
-  const[experience,setExperience]=useState('2')
-   useEffect(() => {
-    const calculateExperience = () => {
-      const now = new Date();
-      const start = new Date("2022-10-18T00:00:00");
-      const diff = now - start;
 
-      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
-      const remAfterYears = diff % (1000 * 60 * 60 * 24 * 365);
-      const months = Math.floor(remAfterYears / (1000 * 60 * 60 * 24 * 30));
-      const exper = `${years}.${months}`;
+const EXPERIENCE_START = new Date("2022-10-18T00:00:00");
+const MS_PER_YEAR  = 1000 * 60 * 60 * 24 * 365;
+const MS_PER_MONTH = 1000 * 60 * 60 * 24 * 30;
 
-      setExperience(exper);
-    };
+function calculateExperience() {
+  const diff = Date.now() - EXPERIENCE_START.getTime();
+  const years  = Math.floor(diff / MS_PER_YEAR);
+  const months = Math.floor((diff % MS_PER_YEAR) / MS_PER_MONTH);
+  return `${years}.${months}`;
+}
 
-    calculateExperience(); // initial run
-    const intervalId = setInterval(calculateExperience, 1000);
+const CURSOR_INNER_STYLE = { backgroundColor: "var(--cursor-color)" };
+const CURSOR_OUTER_STYLE = { border: "3px solid var(--cursor-color)" };
+const HERO_STYLE         = { height: "600vh" };
 
-    return () => clearInterval(intervalId); // cleanup
+export default function App() {
+  const heroRef = useRef();
+  const [experience, setExperience] = useState(calculateExperience);
+
+  useEffect(() => {
+    const id = setInterval(() => setExperience(calculateExperience()), 1000);
+    return () => clearInterval(id);
   }, []);
+
   return (
-    <div className="">
+    <div>
       <Navbar />
 
-      <div ref={heroRef} className="relative w-full" style={{ height: '600vh' }}>
-      <Home experience={experience}heroRef={heroRef}/>
-      <Overlay heroRef={heroRef} />
+      <div ref={heroRef} className="relative w-full" style={HERO_STYLE}>
+        <Home experience={experience} heroRef={heroRef} />
+        <Overlay heroRef={heroRef} />
       </div>
+
       <Portfolio />
       <Experience experience={experience} />
       <Social />
       <About />
       <Contact />
+
       <AnimatedCursor
         innerSize={8}
         outerSize={35}
@@ -53,15 +58,9 @@ function App() {
         outerScale={2}
         outerAlpha={0}
         hasBlendMode={true}
-        innerStyle={{
-          backgroundColor: "var(--cursor-color)",
-        }}
-        outerStyle={{
-          border: "3px solid var(--cursor-color)",
-        }}
+        innerStyle={CURSOR_INNER_STYLE}
+        outerStyle={CURSOR_OUTER_STYLE}
       />
     </div>
   );
 }
-
-export default App;

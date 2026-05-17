@@ -9,7 +9,7 @@ import MyWealth from "../assets/portfolio/mywealth.png";
 const Portfolio = () => {
   const projects = [
        {
-      id: 2,
+      id: 1,
       src: Bookstore,
       link: "https://spectacular-dango-a7d490.netlify.app/",
       name: "Online Book Store",
@@ -24,7 +24,7 @@ const Portfolio = () => {
       description: "E-commerce platform for purchasing books online",
     },
     {
-      id: 3,
+      id: 2,
       src: MyWealth,
       link: "https://my-wealth.vercel.app/",
       name: "My Wealth",
@@ -46,7 +46,7 @@ const Portfolio = () => {
         "My Wealth helps users track investments, SIPs, and unclaimed funds while ensuring privacy.",
     },
     {
-      id: 4,
+      id: 3,
       src: ReportScam,
       link: "https://report-scam.vercel.app/",
       name: "Report Scam",
@@ -63,7 +63,7 @@ const Portfolio = () => {
         "The ReportScam lets users anonymously share scam experiences.",
     },
     {
-      id: 7,
+      id: 4,
       src: PM,
       link: "https://mangesh-portfolio-rt.vercel.app/",
       name: "Personal Portfolio",

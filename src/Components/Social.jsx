@@ -37,8 +37,8 @@ const Social = () => {
         {links.map(({ id, child, href }) => (
           <li
             key={id}
-            className="flex items-center rounded-3xl justify-between w-40 h-14 px-3  ml-[-109px] bg-gray-800 hover:ml-0 my-1
-         hover:rounded-md duration-300"
+            className="flex items-center rounded-3xl justify-between w-40 h-14 px-3 ml-[-109px] glass-pill hover:-ml-2 my-1 border-2 hover:border-gray-400
+         hover:rounded-xl duration-300"
           >
             <a
               href={href}
