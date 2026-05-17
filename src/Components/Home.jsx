@@ -24,7 +24,7 @@ export default function ScrollyCanvas({ heroRef }) {
       return new Promise((resolve) => {
         const img = new Image();
         const padded = i.toString().padStart(3, '0');
-        img.src = `/public/sequence/frame_${padded}_delay-0.067s.webp`;
+        img.src = `/sequence/frame_${padded}_delay-0.067s.webp`;
         const done = () => {
           if (cancelled) return;
           loadedCount++;
