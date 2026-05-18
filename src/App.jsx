@@ -48,7 +48,7 @@ export default function App() {
       <Portfolio />
       <Experience experience={experience} />
       <Social />
-      <About />
+      <About experience={experience}/>
       <Contact />
 
       <AnimatedCursor
