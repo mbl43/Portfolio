@@ -40,7 +40,7 @@ const Contact = () => {
       className="min-h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white py-12 mx-auto"
     >
       <div className="max-w-6xl mx-auto px-4">
-        <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
+        <div className="glass-pill rounded-3xl shadow-2xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Image and Social Links Section */}
             <div className="space-y-8">
@@ -48,13 +48,12 @@ const Contact = () => {
                 <img
                   src={main}
                   alt="contact image"
-                  className="rounded-2xl w-full object-cover shadow-xl transition-transform duration-300 group-hover:scale-[1.02]"
+                  className="rounded-2xl w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center items-center space-x-6">
+              <div className="flex justify-center items-center space-x-6 pb-3">
                 {socialLinks.map((link,id) => (
                   <a
                    
