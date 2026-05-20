@@ -132,7 +132,7 @@ const Experience = ({experience}) => {
             Experience
           </h2>
 
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mt-8 text-white flex sm:flex-row flex-col items-center justify-center text-left space-x-0 sm:space-x-10 w-full gap-10">
+          <div className="glass-pill rounded-2xl p-8 mt-8 text-white flex sm:flex-row flex-col items-center justify-center text-left space-x-0 sm:space-x-10 w-full gap-10">
             {/* left */}
             <div className="sm:w-1/6 w-full flex flex-col items-center justify-center mx-auto space-y-2 ">
               <img
