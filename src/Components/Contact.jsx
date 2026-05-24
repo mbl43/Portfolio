@@ -37,7 +37,7 @@ const Contact = () => {
   return (
     <div
       name="Contact"
-      className="min-h-screen w-full bg-gradient-to-b from-black to-gray-800 text-white py-12 mx-auto"
+      className="min-h-screen w-full glass-fill text-white py-12 mx-auto"
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="glass-pill rounded-3xl shadow-2xl overflow-hidden">
@@ -73,7 +73,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form Section */}
-            <div className="flex flex-col justify-center space-y-8 mx-4">
+            <div className="flex flex-col justify-center space-y-8 m-4">
               <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Get in Touch
               </h2>

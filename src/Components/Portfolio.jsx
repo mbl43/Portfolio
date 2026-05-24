@@ -106,8 +106,8 @@ const Portfolio = () => {
               viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is visible>
             >
               <div
-                className="group relative bg-gray-900/30 backdrop-blur-sm rounded-xl overflow-hidden
-              transform transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 border-b-2 h-full"
+                className="group relative glass-pill rounded-xl overflow-hidden
+              transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 h-full"
               >
                 {/* Image Container */}
                 <div className="relative h-48 overflow-hidden">
@@ -132,7 +132,7 @@ const Portfolio = () => {
                     {stack.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs font-medium bg-blue-500/20 text-blue-300 rounded-full"
+                        className="px-3 py-1 text-xs font-medium glass-pill text-white rounded-full"
                       >
                         {tech}
                       </span>

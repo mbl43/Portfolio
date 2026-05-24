@@ -16,119 +16,108 @@ import {
   Figma,
   TypeScript,
   MaterialUI,
+  ClaudeAI,
 } from "developer-icons";
 import logo from "../assets/portfolio/eclerx.png";
 import { Building2, Calendar } from "lucide-react";
-const Experience = ({experience}) => {
+const Experience = ({ experience }) => {
   const skills = [
     {
       id: 1,
       icon: <HTML5 />,
       text: "HTML",
-      style: "shadow-orange-600",
     },
     {
       id: 2,
       icon: <CSS />,
       text: "CSS",
-      style: "shadow-blue-600",
     },
     {
       id: 3,
       icon: <JavaScript />,
       text: "JavaScript",
-      style: "shadow-yellow-600",
     },
     {
       id: 4,
       icon: <TailwindCSS />,
       text: "Tailwind",
-      style: "shadow-blue-400",
     },
     {
       id: 5,
       icon: <NodeJs />,
       text: "Node.js",
-      style: "shadow-green-600",
     },
     {
       id: 6,
       src: react,
       text: "React.js",
-      style: "shadow-sky-600",
     },
     {
       id: 7,
       icon: <ViteJS />,
       text: "Vite",
-      style: "shadow-yellow-600",
     },
     {
       id: 8,
       icon: <Bootstrap5 />,
       text: "Bootstrap",
-      style: "shadow-purple-600",
     },
     {
       id: 9,
       icon: <Photoshop />,
       text: "Photoshop",
-      style: "shadow-blue-400",
     },
     {
       id: 10,
       icon: <GitHubLight />,
       text: "GitHub",
-      style: "shadow-white",
     },
     {
       id: 11,
       icon: <Git />,
       text: "Git",
-      style: "shadow-orange-400",
     },
     {
       id: 12,
       icon: <VercelLightWordmark />,
       text: "Vercel",
-      style: "shadow-white",
     },
     {
       id: 13,
       icon: <NextJs />,
-      text: "NextJs",
-      style: "shadow-white",
+      text: "Next.js",
     },
     {
       id: 14,
       icon: <Figma />,
       text: "Figma",
-      style: "shadow-orange-600 ",
     },
     {
       id: 15,
       icon: <TypeScript />,
       text: "TypeScript",
-      style: "shadow-blue-600 ",
     },
     {
       id: 16,
       icon: <MaterialUI />,
       text: "Material UI",
-      style: "shadow-blue-600 ",
     },
-    
+    {
+      id: 17,
+      icon: <ClaudeAI />,
+      text: "Claude AI",
+    },
   ];
 
   return (
     <div
       name="Experience"
-      className="bg-gradient-to-b from-black to-gray-800 w-full min-h-screen py-12"
+      className="glass-fill w-full min-h-screen py-10"
     >
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <div className="mb-16">
-           <h2 className="text-5xl font-bold inline-block text-white border-l-8 border-orange-400 pb-2 pl-4">
+        <div className="mb-14">
+          <h2 className="text-5xl font-bold inline-block text-white border-l-8 border-orange-400 pb-2 pl-4">
             Experience
           </h2>
 
@@ -156,16 +145,19 @@ const Experience = ({experience}) => {
             <div className="w-full sm:w-5/6">
               <ul className="list-disc space-y-2">
                 <li className="text-lg leading-relaxed">
-                  I have {experience} years of experience as a Frontend developer at
-                  eClerx Services Limited, Pune. I have Gained experience in 
-                  programming languages such as HTML, CSS, JavaScript, and
-                  Node.js.
+                  I have {experience} years of experience as a Frontend
+                  developer at eClerx Services Limited, Pune. I have Gained
+                  experience in programming languages such as HTML, CSS,
+                  JavaScript, and Node.js.
                 </li>
                 <li className="text-lg leading-relaxed">
-                Developed and maintained responsive landing pages for various eClerx campaigns, resulting in improved user engagement and better conversion rates.
+                  Developed and maintained responsive landing pages for various
+                  eClerx campaigns, resulting in improved user engagement and
+                  better conversion rates.
                 </li>
                 <li className="text-lg leading-relaxed">
-                 Built a Task Management Web App using React.js, boosting team productivity and streamlining internal workflows.
+                  Built a Task Management Web App using React.js, boosting team
+                  productivity and streamlining internal workflows.
                 </li>
                 <li className="text-lg  leading-relaxed">
                   Additionally, my proficiency in frameworks like React.js and
@@ -174,56 +166,45 @@ const Experience = ({experience}) => {
                   capabilities as a Frontend developer.
                 </li>
                 <li className="text-lg leading-relaxed">
-              Created 5 automation tools using Python, JavaScript, and VBScript that cut down process time by 15%, now utilized by other processes, showcasing efficiency and innovation in workflow management.
+                  Created 5 automation tools using Python, JavaScript, and
+                  VBScript that cut down process time by 15%, now utilized by
+                  other processes, showcasing efficiency and innovation in
+                  workflow management.
                 </li>
               </ul>
             </div>
           </div>
-        </div>
-
-        {/* Skills Grid */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-5">
-          {skills.map(({ id, src, text, style, icon }) => (
-            <motion.div
-              key={id} // ✅
-              initial={{ opacity: 0, y: 50 }} // Start hidden
-              whileInView={{ opacity: 1, y: 0 }} // Animate into view
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is visible
-            >
-              <div
-                className={`group relative bg-gray-900/30 backdrop-blur-sm rounded-xl p-6 
-        transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 
-        ${style} shadow-lg hover:shadow-xl`}
-              >
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-24 h-24 flex items-center justify-center p-4 bg-gray-800/50 rounded-xl">
+        </div>      
+      </div>
+       {/* Skills Grid */}
+        <div className="w-full overflow-hidden py-4">
+          <motion.div
+            className="flex gap-6"
+            initial={{ x: 0 }}
+            animate={{ x: -2000 }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          >
+            {skills.map(({ id, src, text, icon }) => (
+              <motion.div key={id} className="flex-shrink-0 w-max">
+                <div className="glass-pill rounded-2xl px-4 py-3 flex flex-row items-center space-x-3 transition-all duration-300">
+                  <div className="w-6 h-6 flex items-center justify-center">
                     {src ? (
                       <img
                         src={src}
                         alt={text}
-                        className="w-full h-full object-contain filter drop-shadow-lg"
+                        className="w-full h-full object-contain"
                         loading="lazy"
                       />
                     ) : (
                       icon
                     )}
                   </div>
-                  <h3 className="text-base sm:text-xl sm:font-semibold text-center text-white">
-                    {text}
-                  </h3>
+                  <h3 className="text-lg font-medium text-white">{text}</h3>
                 </div>
-
-                {/* Hover Effect Overlay */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent 
-          opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"
-                />
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </div>
     </div>
   );
 };
